@@ -19,12 +19,30 @@ namespace Registr
     /// </summary>
     public partial class WorkWindow : Window
     {
+        PaymentDB_PPEntities database = new PaymentDB_PPEntities();
         public WorkWindow()
         {
             InitializeComponent();
+            TablePayments.ItemsSource = database.Payments.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void refreshdatagrid()
+        {
+            TablePayments.ItemsSource = database.Payments.ToList();
+            TablePayments.Items.Refresh();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
 
         }
