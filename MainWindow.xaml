@@ -4,7 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registr"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Width="312" Height="534"
+        Title="MainWindow" Width="360" Height="600"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
         WindowStyle="None">
+
+    <materialDesign:Card UniformCornerRadius="30" >
+        <StackPanel>
+
+            <Image Source="C:\Users\goldw\OneDrive\Рабочий стол\vladpl\Registr\giszkh-logo.jpg" Height="148" Width="139"/>
+            <TextBlock FontSize="26"
+                 FontWeight="Bold" Text="Добро пожаловать!" HorizontalAlignment="Center"/>
+            <TextBlock FontSize="20" FontWeight="SemiBold" Margin="0 10 0 0"
+                 Height="123" Width="260" Foreground="#FFB1B1B1"><Run Text="Государственная "/><LineBreak/><Run Text="информационная система"/><LineBreak/><Run Text="жилищно-коммунального "/><LineBreak/><Run Text="хозяйства"/></TextBlock>
+            <TextBox x:Name="UserName" Width="300" FontSize="18"
+                 materialDesign:HintAssist.Hint="Введите логин" BorderThickness="2"
+                 BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" SelectionBrush="#FF26CEF9"
+                />
+
+            <PasswordBox Margin="0 20 0 0" x:Name="UserPass" Width="300" FontSize="18"
+                 materialDesign:HintAssist.Hint="Введите пароль" BorderThickness="2"
+                 BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                />
+
+            <Button Margin="0 30 0 0" x:Name="LoginButton" Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                 materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="15"
+                 FontSize="18" Content="ВОЙТИ" Click="LoginButton_Click" Cursor="Hand" BorderBrush="#FF3B81E0" Background="#FF4278E4" />
+
+        </StackPanel>
+    </materialDesign:Card>
 </Window>
