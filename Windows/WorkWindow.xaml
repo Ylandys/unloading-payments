@@ -29,11 +29,10 @@
             </Grid.RowDefinitions>
             <DataGrid x:Name="TablePayments" Grid.Row="4" Margin="0,10,0,0" IsReadOnly="False" AutoGenerateColumns="False" Width="968" Height="NaN" HorizontalAlignment="Center">
                 <DataGrid.Columns>
-                    <materialDesign:DataGridTextColumn Width="*" x:Name="Count" Header="П/П" IsReadOnly="True"/>
-                    <materialDesign:DataGridTextColumn Width="*" x:Name="id_payment" Binding="{Binding id}" Header="Уникальный номер" IsReadOnly="False"/>
-                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_amount" Binding="{Binding Amount}" Header="Сумма" IsReadOnly="False"/>
-                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_date_of_admission" Binding="{Binding DateOfAdmission}" Header="Дата Приема" IsReadOnly="False"/>
-                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_personal_account" Binding="{Binding PersonalAccount}" Header="Личный Счет(ЛС)" IsReadOnly="False"/>
+                    <materialDesign:DataGridTextColumn Width="*" x:Name="id_payment" Binding="{Binding id}" Header="ID" IsReadOnly="False"/>
+                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_amount" Binding="{Binding Amount}" Header="Amount" IsReadOnly="False"/>
+                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_date_of_admission" Binding="{Binding DateOfAdmission}" Header="Date Of Admission" IsReadOnly="False"/>
+                    <materialDesign:DataGridTextColumn Width="*" x:Name="payment_personal_account" Binding="{Binding PersonalAccount}" Header="Personal Account" IsReadOnly="False"/>
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -56,8 +55,8 @@
             <DatePicker x:Name="dp" HorizontalAlignment="Left" Margin="337,22,0,0" Grid.Row="3" Width="185" Height="33" VerticalAlignment="Top"/>
             <Label Content="Дата:" FontSize="20" HorizontalAlignment="Left" Margin="241,20,0,0" Grid.Row="3" VerticalAlignment="Top" Width="66" Height="39"/>
             <Button x:Name="Fill_Excel" Grid.Column="1" Content="Заполнить Excel&#xD;&#xA;(получениями)" Margin="14,12,0,0" Grid.Row="4" VerticalAlignment="Top" Height="58" HorizontalAlignment="Left" Width="139" Click="Button_Click"/>
-            <Button x:Name="Open_Folder" Grid.Column="1" Content="Открыть папку" Margin="0,26,39,0" Grid.Row="4" VerticalAlignment="Top" Height="32" HorizontalAlignment="Right" Width="137"/>
-            <TextBlock x:Name="PathToFile_txt" HorizontalAlignment="Left" Margin="10,95,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Путь до файла:" VerticalAlignment="Top"  FontSize="15" Height="20" Width="102"/>
+            <Button x:Name="Open_Folder" Grid.Column="1" Content="Открыть папку" Margin="0,26,39,0" Grid.Row="4" VerticalAlignment="Top" Height="32" HorizontalAlignment="Right" Width="137" Click="Open_Folder_Click"/>
+            <TextBlock x:Name="PathToFile_txt" HorizontalAlignment="Center" Margin="0,95,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Путь до файла:" VerticalAlignment="Top"  FontSize="15" Height="20" Width="948"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="22,15,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Поиск:" FontSize="20" VerticalAlignment="Top" Height="27" Width="71"/>
             <TextBox x:Name="Search_txt" Grid.Column="1" FontSize="20" HorizontalAlignment="Left" Margin="95,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Height="36" TextChanged="Search_txt_TextChanged"/>
             <TextBox x:Name="Result_txt" Grid.Column="1" HorizontalAlignment="Center" Margin="0,169,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Top" Width="358" Height="143" Background="#FFEFEEEE"/>
