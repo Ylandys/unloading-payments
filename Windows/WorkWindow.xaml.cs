@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+//using
+using OfficeOpenXml;
+using System.IO;
 
 namespace Registr
 {
@@ -23,7 +26,6 @@ namespace Registr
         public WorkWindow()
         {
             InitializeComponent();
-            TablePayments.ItemsSource = database.Payments.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -31,11 +33,6 @@ namespace Registr
 
         }
 
-        private void refreshdatagrid()
-        {
-            TablePayments.ItemsSource = database.Payments.ToList();
-            TablePayments.Items.Refresh();
-        }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +41,29 @@ namespace Registr
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+        private void refreshdatagrid()
+        {
+            TablePayments.ItemsSource = database.Payments.ToList();
+            TablePayments.Items.Refresh();
+        }
+
+        private void Update_Table_Click(object sender, object e)
+        {
+            refreshdatagrid();
+        }
+
+        private void Receive_Payments_Click(object sender, RoutedEventArgs e)
+        {
+            TablePayments.ItemsSource = database.Payments.ToList();
+            DateTime? selectedDate = dp.SelectedDate;
+            if (selectedDate.HasValue)
+            {
+                string formatted = selectedDate.Value.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                //Фильтр календарь
+            TablePayments.ItemsSource = database.Payments.Where(d => formatted == d.DateOfAdmission.ToString()).ToList();
+            }
 
         }
     }
