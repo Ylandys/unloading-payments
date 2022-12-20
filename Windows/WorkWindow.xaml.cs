@@ -66,5 +66,17 @@ namespace Registr
             }
 
         }
+
+        private void Search_txt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Search_txt.Text != "")
+            {
+                TablePayments.ItemsSource = database.Payments.Where(s => Search_txt.Text == s.PersonalAccount).ToList();
+            }
+            else
+            {
+                TablePayments.ItemsSource = database.Payments.ToList();
+            }
+        }
     }
 }

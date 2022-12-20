@@ -59,7 +59,7 @@
             <Button x:Name="Open_Folder" Grid.Column="1" Content="Открыть папку" Margin="0,26,39,0" Grid.Row="4" VerticalAlignment="Top" Height="32" HorizontalAlignment="Right" Width="137"/>
             <TextBlock x:Name="PathToFile_txt" HorizontalAlignment="Left" Margin="10,95,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Путь до файла:" VerticalAlignment="Top"  FontSize="15" Height="20" Width="102"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="22,15,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Поиск:" FontSize="20" VerticalAlignment="Top" Height="27" Width="71"/>
-            <TextBox x:Name="Search_txt" Grid.Column="1" FontSize="20" HorizontalAlignment="Left" Margin="95,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Height="36"/>
+            <TextBox x:Name="Search_txt" Grid.Column="1" FontSize="20" HorizontalAlignment="Left" Margin="95,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Height="36" TextChanged="Search_txt_TextChanged"/>
             <TextBox x:Name="Result_txt" Grid.Column="1" HorizontalAlignment="Center" Margin="0,169,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Top" Width="358" Height="143" Background="#FFEFEEEE"/>
             <Button x:Name="Receive_Payments" Grid.Column="1" Content="Получить платежи" Margin="23,130,0,0" Grid.Row="4" HorizontalAlignment="Left" Width="156" Height="32" VerticalAlignment="Top" Cursor="Hand" Click="Receive_Payments_Click"/>
             <Button x:Name="Update_Table" Grid.Column="1" Content="Обновить" Margin="206,130,0,0" Grid.Row="4" VerticalAlignment="Top" Height="32" HorizontalAlignment="Left" Width="157" ButtonBase.Click="Update_Table_Click" Cursor="Hand"/>
