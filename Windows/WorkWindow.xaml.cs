@@ -50,7 +50,8 @@ namespace Registr
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            if(id_payment == TablePayments.SelectedItem)
+            database.SaveChanges();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
