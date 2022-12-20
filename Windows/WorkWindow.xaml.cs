@@ -9,6 +9,7 @@ using System.Windows.Input;
 using ClosedXML.Excel;
 using System.Diagnostics;
 using System.IO;
+using Registr.Windows;
 
 namespace Registr
 {
@@ -54,7 +55,23 @@ namespace Registr
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            
+            Payment item = TablePayments.SelectedItem as Payment;
+            try
+            {
+                Payment PM = database.Payments.Where(c => c.id == item.id).Single();
+                database.Payments.Remove(PM);
+                database.SaveChanges();
 
+                MessageBox.Show("Клиент успешно удалён!");
+                //Метод обновления таблицы после удаления
+                refreshdatagrid();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void refreshdatagrid()
         {
@@ -77,6 +94,9 @@ namespace Registr
                 //Фильтр календарь
                 TablePayments.ItemsSource = database.Payments.Where(d => formatted == d.DateOfAdmission.ToString()).ToList();
             }
+                string output = TablePayments.Items.Count.ToString();
+                int result = int.Parse(output) - 1;
+                MessageBox.Show($"Кол-во платежей: {result}");
 
         }
 
@@ -104,6 +124,12 @@ namespace Registr
 
                 PathToFile_txt.Text = dn;
             }
+        }
+
+        private void AddPayment_Click(object sender, RoutedEventArgs e)
+        {
+            AddPayment AP = new AddPayment();
+            AP.ShowDialog();
         }
     }
 }

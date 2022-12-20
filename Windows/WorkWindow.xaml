@@ -59,12 +59,12 @@
             <TextBlock x:Name="PathToFile_txt" HorizontalAlignment="Center" Margin="0,95,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Путь до файла:" VerticalAlignment="Top"  FontSize="15" Height="20" Width="948"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="22,15,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Поиск:" FontSize="20" VerticalAlignment="Top" Height="27" Width="71"/>
             <TextBox x:Name="Search_txt" Grid.Column="1" FontSize="20" HorizontalAlignment="Left" Margin="95,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Height="36" TextChanged="Search_txt_TextChanged"/>
-            <TextBox x:Name="Result_txt" Grid.Column="1" HorizontalAlignment="Center" Margin="0,169,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Top" Width="358" Height="143" Background="#FFEFEEEE"/>
             <Button x:Name="Receive_Payments" Grid.Column="1" Content="Получить платежи" Margin="23,130,0,0" Grid.Row="4" HorizontalAlignment="Left" Width="156" Height="32" VerticalAlignment="Top" Cursor="Hand" Click="Receive_Payments_Click"/>
             <Button x:Name="Update_Table" Grid.Column="1" Content="Обновить" Margin="206,130,0,0" Grid.Row="4" VerticalAlignment="Top" Height="32" HorizontalAlignment="Left" Width="157" ButtonBase.Click="Update_Table_Click" Cursor="Hand"/>
             <CheckBox x:Name="One_to_Ten" Grid.Column="1" Content="1 по 10 числа" HorizontalAlignment="Center" Margin="0,343,0,0" Grid.Row="4" VerticalAlignment="Top" Height="18" Width="96"/>
             <CheckBox x:Name="Ten_to_Twenty" Grid.Column="1" Content="10 по 20 числа" HorizontalAlignment="Left" Margin="133,366,0,0" Grid.Row="4" VerticalAlignment="Top" Height="18" Width="104"/>
             <CheckBox x:Name="Twenty_to_finish" Grid.Column="1" Content="20 по конец месяца" HorizontalAlignment="Center" Margin="0,389,0,0" Grid.Row="4" VerticalAlignment="Top" Height="18" Width="132"/>
+            <Button x:Name="AddPayment" Grid.Column="1" Content="Добавить&#xD;&#xA;платеж" Margin="134,214,0,0" Grid.Row="4" VerticalAlignment="Top" Height="58" HorizontalAlignment="Left" Width="114" Click="AddPayment_Click" Cursor="Hand"/>
         </Grid>
     </materialDesign:Card>
 </Window>
