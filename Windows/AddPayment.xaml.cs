@@ -26,7 +26,7 @@ namespace Registr.Windows
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             Payment PM = new Payment();
 

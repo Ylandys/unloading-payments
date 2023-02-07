@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Registr"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{x:Null}"
         mc:Ignorable="d"
         Title="WorkWindow" Height="565" Width="1342"
         WindowStyle="None"
@@ -14,7 +12,7 @@
         WindowStartupLocation="CenterScreen"
         MinWidth="1342" 
         MinHeight="565">
-    <materialDesign:Card UniformCornerRadius="30">
+    <materialDesign:Card UniformCornerRadius="30" Background="Transparent">
         <Grid x:Name="panel" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>

@@ -6,14 +6,12 @@
         xmlns:local="clr-namespace:Registr"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        Background="White"
         Title="MainWindow" Width="360" Height="600"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{x:Null}"
         WindowStyle="None">
 
-    <materialDesign:Card UniformCornerRadius="30" >
+    <materialDesign:Card UniformCornerRadius="30" Background="Transparent">
         <StackPanel>
-
             <Image Source="C:\Users\goldw\OneDrive\Рабочий стол\vladpl\Registr\giszkh-logo.jpg" Height="148" Width="139"/>
             <TextBlock FontSize="26"
                  FontWeight="Bold" Text="Добро пожаловать!" HorizontalAlignment="Center"/>

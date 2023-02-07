@@ -22,6 +22,7 @@ namespace Registr
         public WorkWindow()
         {
             InitializeComponent();
+            TablePayments.ItemsSource = database.Payments.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,9 @@ namespace Registr
                 Process.Start("wpfdata.csv");
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -115,9 +118,10 @@ namespace Registr
 
         private void Open_Folder_Click(object sender, RoutedEventArgs e)
         {
+            //Дописать форму открытия окна
             OpenFileDialog openFile = new OpenFileDialog();
             {
-                string dn = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Платежи";
+                string dn = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
                 openFile.InitialDirectory = dn;
 

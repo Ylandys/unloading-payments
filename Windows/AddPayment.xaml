@@ -11,8 +11,8 @@
         Background="{x:Null}"
         WindowStyle="None">
 
-    <materialDesign:Card UniformCornerRadius="30" >
-        <StackPanel>
+    <materialDesign:Card UniformCornerRadius="30" Margin="0,0,0,30" >
+        <StackPanel Margin="0,0,0,-7">
             <TextBox x:Name="Amount" Width="300" FontSize="18"
                  materialDesign:HintAssist.Hint="Введите сумму" BorderThickness="2"
                  BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" SelectionBrush="#FF26CEF9" Margin="0,50,0,0"
@@ -29,9 +29,9 @@
 
             <Button Margin="0 30 0 0" x:Name="LoginButton" Style="{StaticResource MaterialDesignFlatMidBgButton}"
                  materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="15"
-                 FontSize="18" Content="Добавить платеж" Click="LoginButton_Click" Cursor="Hand" BorderBrush="#FF3B81E0" Background="#FF4278E4" />
+                 FontSize="18" Content="Добавить платеж" Click="AddButton_Click" Cursor="Hand" BorderBrush="#FF3B81E0" Background="#FF4278E4" />
             <TextBlock FontSize="20" FontWeight="SemiBold"
-                 Height="70" Width="260" Foreground="#FFB1B1B1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0"><Run Text="Добавление "/><Run Text="платежа в ИС"/><LineBreak/><Run Text="Заполните поля"/></TextBlock>
+                 Height="70" Width="260" Foreground="#FFB1B1B1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0"><Run Text="Добавление "/><Run Text="платежа в ГИС"/><LineBreak/><Run Text="Заполните поля"/></TextBlock>
 
         </StackPanel>
     </materialDesign:Card>
